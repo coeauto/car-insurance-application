@@ -6,6 +6,25 @@
     <title>Document</title>
 </head>
 <body>
-    Test
+    <form method="post">
+		<input type="button" value="Send Email" onclick="sendEmail()"/>
+    </form> 
+    
+    <script>
+        src='https://smtpjs.com/v3/smtp.js'
+        function sendEmail() {
+            Email.send({
+            Host: "smtp.gmail.com",
+            Username : "coeasiaautomation@gmail.com",
+            Password : "Inchcap3",
+            To : 'lester.fajardo@gmail.com',
+            From : "coeasiaautomation@gmail.com",
+            Subject : "test",
+            Body : "<email body>",
+            }).then(
+                message => alert("mail sent successfully")
+            );
+        }
+    </script>
 </body>
 </html>
