@@ -9,9 +9,8 @@
     <form method="post">
 		<input type="button" value="Send Email" onclick="sendEmail()"/>
     </form> 
-    
+    <script src='https://smtpjs.com/v3/smtp.js'></script>
     <script>
-        src='https://smtpjs.com/v3/smtp.js'
         function sendEmail() {
             Email.send({
             Host: "smtp.gmail.com",
